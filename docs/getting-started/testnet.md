@@ -229,7 +229,7 @@ Output of this command will be similar to presented below
 ```bash
 - name: WALLET_NAME
   type: local
-  address: testvdl1u9a5u30svfrhajq7jgquc02956lxgezwx2lnkx
+  address: utbz1u9a5u30svfrhajq7jgquc02956lxgezwx2lnkx
   pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"AwCmb1H3nLx9uPqrcAqKQPRYe/chlkK8BWCJh3P3Kkry"}'
   mnemonic: ""
 
@@ -251,7 +251,7 @@ In order to get some initial funds for your test node/validator you can visit fa
 Once you request funds from faucet check balance on your account:
 
 ```bash
-testbzed query bank balances testvdl1u9a5u30svfrhajq7jgquc02956lxgezwx2lnkx
+testbzed query bank balances utbz1u9a5u30svfrhajq7jgquc02956lxgezwx2lnkx
 ```
 
 Output will be similar to this:
@@ -259,14 +259,14 @@ Output will be similar to this:
 ```bash
 balances:
 - amount: "20000000"
-  denom: utvdl
+  denom: utbz
 pagination:
   next_key: null
   total: "0"
 ```
 
 ::: tip NOTE:
-Denomiation presented by command is in uvdl. For your information 1vdl = 1000000uvdl.
+Denomiation presented by command is in ubze. For your information 1vdl = 1000000ubze.
 :::
 
 ### Create Validator
@@ -278,7 +278,7 @@ testbzed tx staking create-validator \
     --commission-max-change-rate="0.05" \
     --commission-max-rate="0.3" \
     --commission-rate="0.1" \
-    --amount="10000000uvdl" \
+    --amount="10000000ubze" \
     --pubkey=$(testbzed tendermint show-validator) \
     --website="https://your.website" \
     --details="Description of your validator." \
@@ -288,7 +288,7 @@ testbzed tx staking create-validator \
     --min-self-delegation="1" \
     --gas auto \
     --gas-adjustment=1.2 \
-    --fees 200000uvdl \
+    --fees 200000ubze \
     --from=WALLET_NAME \
     --keyring-backend os
 ```

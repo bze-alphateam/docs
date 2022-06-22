@@ -174,7 +174,7 @@ Replace NODE_NAME with the name you want to assign to your validator.
 In **_\${HOME}/.bze/config/config.toml_** find the **_[p2p]_** section, and change the following to match:
 
 ```bash
-seeds = "883ec7d5af7222c206674c20c997ccc5c242b38b@ec2-3-82-120-39.compute-1.amazonaws.com:26656,eed11fff15b1eca8016c6a0194d86e4a60a65f9b@apollo.erialos.me:26656"
+seeds = "102d28592757192ccf709e7fbb08e7dd8721feb1@51.15.138.216:26656"
 ```
 
 Now it is time to download **_genesis.json_** file, which will allow the node to synchronize
@@ -232,7 +232,7 @@ All tasks in **SECTION 3** have to be performed as the **bze** user created in *
 su - bze
 ```
 
-In order to create a validator, you must have a Beezee wallet and at least 2 VDL that you must self delegate as the validator.
+In order to create a validator, you must have a Beezee wallet and at least 2 BZE that you must self delegate as the validator.
 
 
 ### Create Wallet
@@ -250,7 +250,7 @@ Output of this command will be similar to presented below
 ```bash
 - name: WALLET_NAME
   type: local
-  address: vdl1hjhglrzggqtdhsh3ag8jp0cckmva5pe976jxel
+  address: bze1hjhglrzggqtdhsh3ag8jp0cckmva5pe976jxel
   pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"Anriv0TNrt1cz3+pSq2UDNiJQZINNlgtknousVlcujZ7"}'
   mnemonic: ""
 
@@ -268,7 +268,7 @@ Write or print out your `mnemonic seed` and keep it in a safe place if you ever 
 Now you have to transfer some beezee to your validator wallet. To check the balance on your account:
 
 ```bash
-bzed query bank balances vdl1hjhglrzggqtdhsh3ag8jp0cckmva5pe976jxel
+bzed query bank balances ubze1hjhglrzggqtdhsh3ag8jp0cckmva5pe976jxel
 ```
 
 The output will be similar to this:
@@ -276,14 +276,14 @@ The output will be similar to this:
 ```bash
 balances:
 - amount: "15000000000"
-  denom: uvdl
+  denom: ubze
 pagination:
   next_key: null
   total: "0"
 ```
 
 ::: tip NOTE:
-Denomiation presented by command is in uvdl(micro-beezee). Use this formula to convert, 1 VDL = 1,000,000 uVDL.
+Denomiation presented by command is in ubze(micro-beezee). Use this formula to convert, 1 BZE = 1,000,000 uBZE.
 :::
 
 ### Create Validator
@@ -295,7 +295,7 @@ bzed tx staking create-validator \
     --commission-max-change-rate="0.05" \
     --commission-max-rate="0.3" \
     --commission-rate="0.11" \
-    --amount="10000000uvdl" \
+    --amount="10000000ubze" \
     --pubkey=$(bzed tendermint show-validator) \
     --website="https://your.website" \
     --details="Description of your validator." \
@@ -305,7 +305,7 @@ bzed tx staking create-validator \
     --min-self-delegation="1" \
     --gas auto \
     --gas-adjustment=1.2 \
-    --fees 200000uvdl \
+    --fees 200000ubze \
     --from=WALLET_NAME \
     --keyring-backend os
 ```
