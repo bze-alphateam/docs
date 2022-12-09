@@ -36,15 +36,15 @@ module.exports = {
         items: [
           {
             text: "Mainnet Explorer",
-            link: "https://explorer.erialos.me/BeeZee",
+            link: "https://explorer.thesilverfox.pro/beezee",
           },
           {
             text: "Testnet Explorer",
-            link: "https://explorer.erialos.me/Testnet-BeeZee",
+            link: "https://testnet.explorer.thesilverfox.pro/beezee",
           },
           {
             text: "GitHub Repositories",
-            link: "https://github.com/bze-alphateam/bze",
+            link: "https://github.com/bze-alphateam",
           },
           {
             text: "Beezee Wallet (Android)",

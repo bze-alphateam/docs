@@ -15,35 +15,40 @@
           <div class="column">
             <h3>Developers</h3>
             <div class="link">
-              <a href="https://explorer.erialos.me" target="_blank">
-                Explorers
+              <a href="https://explorer.thesilverfox.pro/beezee" target="_blank">
+                Erialos Explorer
+              </a>
+            </div>
+            <div class="link">
+              <a href="https://explorers.vidulum.app/beezee" target="_blank">
+                VDL Explorer
               </a>
             </div>
             <div class="link">
               <a href="/getting-started"> Documentation </a>
             </div>
-            <div class="link">
+            <!-- <div class="link">
               <a href="https://getbze.com/testnet-faucet" target="_blank">
                 Faucet
               </a>
-            </div>
+            </div> -->
           </div>
           <div class="column">
             <h3>Wallets</h3>
             <div class="link">
               <a
-                href="https://play.google.com/store/apps/details?id=com.vidulumwallet.app"
+                href="https://vidulum.app/"
                 target="_blank"
               >
-                Android
+                Vidulum App
               </a>
             </div>
             <div class="link">
               <a
-                href="https://apps.apple.com/us/app/id1505859171"
+                href="https://keplr.getbze.com/"
                 target="_blank"
               >
-                iOS
+                Keplr
               </a>
             </div>
           </div>
@@ -52,35 +57,28 @@
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://twitter.com/VidulumApp"
+            href="https://twitter.com/BZEdgeCoin"
           >
             <img :src="$withBase('/social/twitter.svg')" alt="twitter" />
           </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.youtube.com/channel/UCNd92ZViZweu6zz5ydt_wrQ"
-          >
-            <img :src="$withBase('/social/youtube.svg')" alt="youtube" />
-          </a>
-          <a
+          <!-- <a
             target="_blank"
             rel="noopener noreferrer"
             href="https://www.reddit.com/r/VidulumOfficial/"
           >
             <img :src="$withBase('/social/reddit.svg')" alt="reddit" />
-          </a>
+          </a> -->
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://discord.gg/hne7Ccq"
+            href="https://discord.gg/DBTJnps"
           >
             <img :src="$withBase('/social/discord.svg')" alt="discord" />
           </a>
         </div>
       </div>
       <p class="copyright">
-        Copyright © {{ currentYear }} Beezee. All rights reserved.
+        Copyright © {{ currentYear }} BeeZee.
       </p>
     </div>
   </footer>

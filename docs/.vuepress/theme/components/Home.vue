@@ -2,14 +2,14 @@
   <div>
     <main class="home" aria-labelledby="main-title">
       <header class="hero">
-        <img
+        <!-- <img
           class="logo"
-          :src="$withBase('/logo-icon-white.svg')"
+          :src="$withBase('/bze.svg')"
           alt="logo-icon-white"
-        />
+        /> -->
         <p class="description">Welcome to</p>
         <h1 v-if="data.heroText !== null" id="main-title">
-          Beezee Chain Documentation
+          BeeZee Chain Documentation
         </h1>
         <p class="action" v-if="data.actionText && data.actionLink">
           <NavLink class="action-button" :item="actionLink" />
@@ -130,11 +130,11 @@ export default {
     padding 3rem 2rem;
 
     color white;
-    background url(../../public/hero-bg.svg);
+    background black;
     background-size cover;
 
     logo {
-      max-width 100%;
+      max-width 80px;
       z-index 1;
       display block;
     }
